@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="src/main.css" />
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <div id="modalDiv" class="modal">
+      <!--To be used for all modals-->
+    </div>
+
+    <section id="selectTeam">
+      <h1 style="text-align: center;">Kanto League Team</h1>
+
+      <div id="menu-outer">
+        <div class="table">
+          <ul id="horizontal-list">
+            <!--To DO
+              After selecting each pokemon the color will be updated here
+              and each pokeball will have a tooltip with the name of the 
+              pokemon in that slot
+            -->
+            <li class="pokemon-selected">X</li>
+            <li class="pokemon-selected">X</li>
+            <li class="pokemon-selected">X</li>
+            <li class="pokemon-selected">X</li>
+            <li class="pokemon-selected">X</li>
+            <li class="pokemon-selected">X</li>
+            <button
+              class="btn-go-to-attacks"
+              id="goToSelectAttacksSection"
+              disabled
+            >
+              Go to Select Attacks
+            </button>
+          </ul>
+        </div>
+      </div>
+
+      <ol id="pokedex"></ol>
+    </section>
+
+    <!-- Attacks Section-->
+    <!-- Select attacks for each pokemon selected-->
+    <section id="selectAttacks" style="display: none;">
+      <h1 style="text-align: center;">Select Attacks</h1>
+      <div class="table">
+        <button class="btn-go-to-finalSection" id="goToStatsSection" disabled>
+          Go to Final Stats
+        </button>
+        <p class="message-attacks-error">
+          *Each pokemon must have 4 attacks selected!
+        </p>
+        <div id="container"></div>
+      </div>
+    </section>
+
+    <!-- Stats Section-->
+    <!-- Compare stats of each pokemon and save it-->
+    <section id="pokemonStats" style="display: none;">
+      <h1 style="text-align: center;">Stats Section</h1>
+      <div class="table">
+        <button class="btn-store-information" id="saveTeamInformation" disabled>
+          Save
+        </button>
+      </div>
+    </section>
+
+    <script src="src/PokemonList.js"></script>
+    <script src="src/AttacksList.js"></script>
+    <script src="src/StatsList.js"></script>
+  </body>
+</html>
